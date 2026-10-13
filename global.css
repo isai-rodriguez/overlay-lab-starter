@@ -71,7 +71,18 @@ body {
 }
 
 /* YOUR CODE: Lab 1, the overlay recipe */
-
+.photo-card{
+  position: relative;
+}
+.overlay{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  color:#FFFFFF;
+  background-color: --primary-color(0, 0, 0,0.55 );
+}
 
 
 
@@ -82,8 +93,40 @@ body {
 }
 
 /* YOUR CODE: Lab 2, four entrances */
+.oberlay{
+  transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity:1;
 
+}
+.overlay-fade{
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity:1;
+}
 
+.photo-card:hover.overlays,
+.photo-card:focus-visible .overlay {
+  opacity:1;
+}
+.overlay-fade  .overlay{
+  color: red;
+}
+
+.overlay-slide .overlay{
+  transform: translateY(100%);
+  overflow:hidden
+}
+.overlay-slide .overly{
+  transform: translateY(0%);
+
+}
+.overlay-zoom.photo-card:hover .photo {
+  transform: scale(1.15);
+  transition: 0.6s;
+}
+.overlay-gradient .overlay-gradient:focus-visible .overlay{
+  background: linear-gradient(to top, rgba(0,0,0,0.85),rgba(0,0,0,0)60%);
+  opacity:1;
+}
 
 
 /* ---------- Lab 3: Click Moves ---------- */
