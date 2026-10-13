@@ -119,11 +119,11 @@ body {
   transform: translateY(0%);
 
 }
-.overlay-zoom.photo-card:hover .photo {
+.overlay-zoom .photo-card:hover .photo {
   transform: scale(1.15);
   transition: 0.6s;
 }
-.overlay-gradient .overlay-gradient:focus-visible .overlay{
+.overlay-gradient:hover .overlay, .overlay-gradient:focus-visible .overlay{
   background: linear-gradient(to top, rgba(0,0,0,0.85),rgba(0,0,0,0)60%);
   opacity:1;
 }
