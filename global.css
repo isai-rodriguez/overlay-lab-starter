@@ -81,7 +81,7 @@ body {
   place-items: center;
   border-radius: var(--radius);
   color:#FFFFFF;
-  background-color: --primary-color(0, 0, 0,0.55 );
+  background-color: --primary-color(0, 0, 0,0.5 );
 }
 
 
@@ -93,36 +93,32 @@ body {
 }
 
 /* YOUR CODE: Lab 2, four entrances */
-.oberlay{
+.overlay{
   transition: opacity 0.4s ease, transform 0.4s ease;
-    opacity:1;
-
-}
-.overlay-fade{
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  opacity:1;
+ opacity:0;
 }
 
-.photo-card:hover.overlays,
+.photo-card:hover.overlays, 
 .photo-card:focus-visible .overlay {
   opacity:1;
 }
-.overlay-fade  .overlay{
-  color: red;
+.overlay-fade  .overlay {
+  color: blue;
+
 }
 
 .overlay-slide .overlay{
   transform: translateY(100%);
-  overflow:hidden
-}
-.overlay-slide .overly{
-  transform: translateY(0%);
+  overflow:hidden;
 
 }
-.overlay-zoom .photo-card:hover .photo {
+
+.overlay-zoom:hover .photo {
   transform: scale(1.15);
   transition: 0.6s;
+
 }
+
 .overlay-gradient:hover .overlay, .overlay-gradient:focus-visible .overlay{
   background: linear-gradient(to top, rgba(0,0,0,0.85),rgba(0,0,0,0)60%);
   opacity:1;
@@ -130,6 +126,7 @@ body {
 
 
 /* ---------- Lab 3: Click Moves ---------- */
+
 .click-row {
   display: flex;
   flex-wrap: wrap;
@@ -162,6 +159,28 @@ body {
 }
 
 /* YOUR CODE: Lab 3, click moves (:active) */
+
+.push-button{
+  transition: 0.5;
+  box-shadow: 0,5,0 rgba(312, 31, 2, 0.35);
+}
+.push-button:active{ 
+  box-shadow: 2px 1px 3px rgba(0,0,0,0.35);
+  transform: translateY(6px);
+  background-color: navy;
+}
+.squish-card:active{
+  box-shadow:2px 1px 3px rgba(0,0,0,0.35);
+  transform: translateY(6px);
+  background-color: navy;
+
+}
+.slide-button:active{
+  box-shadow:2px 1px 3px rgba(0,0,0,0.35);
+  transform: translateX(20px);
+  background-color: navy;
+  
+}
 
 
 
